@@ -1,0 +1,37 @@
+.ai-hero {
+  text-align: center;
+  padding: 70px 6% 56px;
+  background: var(--gradient-soft);
+}
+.badge-soft {
+  display: inline-block;
+  padding: 7px 16px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.ai-hero h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 8px; }
+.ai-hero p { color: var(--muted); font-size: 1.1rem; }
+
+.ai-modes { padding-top: 56px; }
+.ai-modes .card { position: relative; }
+
+.soon {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--accent-light);
+  color: #0a8f8b;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .ai-hero h1 { font-size: 1.9rem; }
+}

@@ -1,0 +1,20 @@
+.notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 90px 6%;
+  background: var(--gradient-soft);
+}
+.notfound h1 {
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 800;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.notfound h2 { margin: 8px 0; }
+.notfound p { color: var(--muted); margin-bottom: 24px; }

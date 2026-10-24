@@ -1,0 +1,87 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 6%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+.logo span { color: var(--primary); }
+
+.nav-links { display: flex; gap: 6px; }
+.nav-links a {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--muted);
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover { color: var(--primary); background: var(--primary-light); }
+.nav-links a.active { color: var(--primary); background: var(--primary-light); font-weight: 600; }
+
+.nav-actions { display: flex; align-items: center; gap: 10px; }
+.nav-actions .btn { padding: 8px 18px; font-size: 0.9rem; }
+
+.nav-user {
+  max-width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 4px 11px;
+  font-size: 1.3rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+  .navbar { flex-wrap: wrap; }
+  .menu-btn { display: block; }
+  .nav-actions { margin-left: auto; }
+  .nav-user { display: none; }
+
+  .nav-links {
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    gap: 2px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nav-links.show { max-height: 280px; padding-top: 8px; }
+}
+
+
+@media (max-width: 480px) {
+  .navbar { padding: 12px 4%; gap: 8px; }
+  .logo { font-size: 1.3rem; }
+  .nav-actions { gap: 6px; }
+  .nav-actions .btn { padding: 6px 12px; font-size: 0.82rem; }
+  .menu-btn { padding: 2px 9px; font-size: 1.15rem; }
+}
